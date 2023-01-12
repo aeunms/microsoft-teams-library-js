@@ -205,13 +205,6 @@ const RegisterFullScreenChangeHandler = (): React.ReactElement =>
     },
   });
 
-const CheckPageCapability = (): React.ReactElement =>
-  ApiWithoutInput({
-    name: 'checkPageCapability',
-    title: 'Check Page Call',
-    onClick: async () => `Pages module ${pages.isSupported() ? 'is' : 'is not'} supported`,
-  });
-
 const PagesAPIs = (): ReactElement => (
   <ModuleWrapper title="Pages">
     <GetConfig />
@@ -222,7 +215,6 @@ const PagesAPIs = (): ReactElement => (
     <RegisterFocusEnterHandler />
     <SetCurrentFrame />
     <RegisterFullScreenChangeHandler />
-    <CheckPageCapability />
   </ModuleWrapper>
 );
 
